@@ -53,3 +53,7 @@ button{
 	height: 0;
 	top: 0;
 }
+button:hover{
+	color:red;
+	border-color:red
+}

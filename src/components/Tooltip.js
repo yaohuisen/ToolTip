@@ -6,7 +6,7 @@ export default class Tooltip extends Component {
 		super();
 	}
 	componentDidMount(){
-		$("button").click(function(){
+		$("button").hover(function(){
 			var posTop = $(this).offset().top;
 			var posLeft = $(this).offset().left;
 			var butWidth = $(this).outerWidth();
@@ -25,12 +25,12 @@ export default class Tooltip extends Component {
 					$(".text").css({left:posLeft-20,top:posTop-butHeight-15,display:"block"})
 				}else{
 					$(".after").css({left:textWidth/2,top:textHeight,transform:"rotate(0deg)"})
-					$(".text").css({left:posLeft-10,top:posTop-butHeight-15,display:"block"})					
+					$(".text").css({left:posLeft-5,top:posTop-butHeight-15,display:"block"})					
 				}
 			}
 			if($(this).parent().attr("class") == "Bottom"){
 					$(".after").css({left:textWidth/2,top:-10,transform:"rotate(180deg)"})
-					$(".text").css({left:posLeft-10,top:posTop+butHeight+10,display:"block"})		
+					$(".text").css({left:posLeft-5,top:posTop+butHeight+10,display:"block"})		
 					
 			}
 			if($(this).parent().attr("class") == "Left"){
